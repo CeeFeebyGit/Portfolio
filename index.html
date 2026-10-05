@@ -93,6 +93,12 @@
       background: rgba(15, 15, 15, 0.8);
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 6px;
+      cursor: pointer;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .thumb:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 255, 255, 0.3);
     }
     .thumb img {
       position: absolute;
@@ -154,6 +160,7 @@
       position: relative;
       border: 1px solid rgba(255, 255, 255, 0.15);
       background: rgba(10, 10, 10, 0.8);
+      cursor: pointer;
     }
     .banner-frame img {
       width: 100%;
@@ -164,6 +171,44 @@
     }
     .banner-frame img:hover {
       filter: blur(0px) brightness(1);
+    }
+
+    /* Lightbox Modal */
+    .lightbox-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+    .lightbox-modal.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .lightbox-modal img {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      font-size: 2.5rem;
+      color: #ffffff;
+      cursor: pointer;
+      line-height: 1;
+      user-select: none;
     }
 
     /* Sticky Bottom Black Bar */
@@ -268,10 +313,44 @@
     </div>
   </div>
 
+  <!-- Lightbox Modal Container -->
+  <div class="lightbox-modal" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <img id="lightboxImg" src="" alt="Enlarged Preview">
+  </div>
+
   <!-- Bottom Black Bar -->
   <footer>
     <p>FILM & PHOTOGRAPHY CLUB LEAD PORTFOLIO</p>
   </footer>
+
+  <script>
+    const modal = document.getElementById('lightbox');
+    const modalImg = document.getElementById('lightboxImg');
+    const closeBtn = document.getElementById('lightboxClose');
+
+    // Click to enlarge any gallery or banner image
+    document.querySelectorAll('.thumb img, .banner-frame img').forEach(img => {
+      img.addEventListener('click', () => {
+        modalImg.src = img.src;
+        modal.classList.add('active');
+      });
+    });
+
+    // Close on click close icon or dark overlay
+    modal.addEventListener('click', (e) => {
+      if (e.target !== modalImg) {
+        modal.classList.remove('active');
+      }
+    });
+
+    // Close on Esc key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        modal.classList.remove('active');
+      }
+    });
+  </script>
 
 </body>
 </html>
