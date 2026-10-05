@@ -3,101 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio | Film & Photography Portfolio</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      background-color: #000000;
-      color: #ffffff;
-      font-family: Arial, sans-serif;
-    }
-    header {
-      padding: 20px;
-      background: #0a0a0a;
-      border-bottom: 1px solid #222222;
-    }
-    h1 {
-      font-size: 1.5rem;
-    }
-    p.sub {
-      color: #777777;
-      font-size: 0.85rem;
-      margin-top: 2px;
-    }
-
-    /* Thornton-style 4-Column Edge-to-Edge Grid */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2px;
-      background: #111111;
-    }
-    @media (max-width: 900px) {
-      .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    /* Square Image Crop Box */
-    .thumb {
-      position: relative;
-      width: 100%;
-      padding-top: 100%; /* Creates perfect square */
-      overflow: hidden;
-      background: #050505;
-    }
-    .thumb img, .thumb iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border: none;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1>Graphic Design Portfolio</h1>
-    <p class="sub">Film & Photography GD Portfolio</p>
-  </header>
-
-  <div class="gallery-grid">
-    <!-- Item 1 -->
-    <div class="thumb">
-      <img src="VANITY LICNESE PLATE.png" alt="Vanity License Plate">
-    </div>
-
-    <!-- Item 2 -->
-    <div class="thumb">
-      <img src="Template 1.png" alt="Template Graphic">
-    </div>
-
-    <!-- Item 3 -->
-    <div class="thumb">
-      <iframe src="Copyright BG.pdf"></iframe>
-    </div>
-
-    <!-- Add more items by copying the block below for new images -->
-    <!--
-    <div class="thumb">
-      <img src="YOUR_NEXT_IMAGE.png">
-    </div>
-    -->
-  </div>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio | Film & Photography Lead</title>
   <style>
     * {
@@ -106,30 +11,38 @@
       padding: 0;
     }
     body {
-      background-color: #000000;
+      background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('Knight Render BG.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
       color: #ffffff;
       font-family: Arial, sans-serif;
+      min-height: 100vh;
     }
     header {
-      padding: 20px;
-      background: #0a0a0a;
-      border-bottom: 1px solid #222222;
+      padding: 24px 20px;
+      background: rgba(10, 10, 10, 0.85);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
     }
     h1 {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
+      letter-spacing: 0.5px;
     }
     p.sub {
-      color: #777777;
+      color: #aaaaaa;
       font-size: 0.85rem;
-      margin-top: 2px;
+      margin-top: 4px;
     }
 
-    /* Thornton-style 4-Column Edge-to-Edge Grid */
+    /* 4-Column Grid */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 2px;
-      background: #111111;
+      gap: 10px;
+      padding: 20px;
+      max-width: 1400px;
+      margin: 0 auto;
     }
     @media (max-width: 900px) {
       .gallery-grid {
@@ -137,22 +50,23 @@
       }
     }
 
-    /* Square Image Crop Box */
     .thumb {
       position: relative;
       width: 100%;
-      padding-top: 100%; /* Creates perfect square */
+      padding-top: 100%;
       overflow: hidden;
-      background: #050505;
+      background: rgba(15, 15, 15, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
     }
-    .thumb img, .thumb iframe {
+    .thumb img {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      border: none;
+      object-fit: contain;
+      padding: 8px;
     }
   </style>
 </head>
@@ -176,15 +90,8 @@
 
     <!-- Item 3 -->
     <div class="thumb">
-      <iframe src="Copyright BG.pdf"></iframe>
+      <img src="Background EX 1.png" alt="Background Graphic">
     </div>
-
-    <!-- Add more items by copying the block below for new images -->
-    <!--
-    <div class="thumb">
-      <img src="YOUR_NEXT_IMAGE.png">
-    </div>
-    -->
   </div>
 
 </body>
