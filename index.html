@@ -140,6 +140,32 @@
       margin-bottom: 6px;
     }
 
+    /* Large Rounded Blurred Image Banner */
+    .feature-banner {
+      max-width: 1400px;
+      margin: 10px auto 40px auto;
+      padding: 0 20px;
+    }
+    .banner-frame {
+      width: 100%;
+      height: 320px;
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(10, 10, 10, 0.8);
+    }
+    .banner-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: blur(3px) brightness(0.85);
+      transition: filter 0.3s ease;
+    }
+    .banner-frame img:hover {
+      filter: blur(0px) brightness(1);
+    }
+
     /* Sticky Bottom Black Bar */
     footer {
       position: fixed;
@@ -186,8 +212,8 @@
     </div>
   </div>
 
-  <!-- Application Section Header -->
-  <h2 class="section-title">APPLICATION</h2>
+  <!-- Applications Section Header -->
+  <h2 class="section-title">APPLICATIONS</h2>
 
   <!-- Screenshots Grid -->
   <div class="gallery-grid">
@@ -217,8 +243,8 @@
       <div class="exp-title">Graphic Design Background</div>
       <div class="exp-subtitle">Film & Photography Club | 2024 - Present</div>
       <ul class="exp-list">
-        <li> I enjoy making custom designs and stuff for projects that I do.</li>
-        <li>I take Adobe Visual Arts and have current access to Photoshop, which i aim to become efficient at.</li>
+        <li>I enjoy making custom designs and stuff for projects that I do.</li>
+        <li>I take Adobe Visual Arts and have current access to Photoshop, which I aim to become efficient at.</li>
         <li>Occasionally draw or some method of the sort to begin more complex tasks.</li>
       </ul>
     </div>
@@ -227,16 +253,21 @@
       <div class="exp-title">Caleb Freeman</div>
       <div class="exp-subtitle">2026</div>
       <ul class="exp-list">
-        <li>School Gmail: calfre3594@student.ccs.k12.nc.us
-</li>
-      
+        <li>School Gmail: calfre3594@student.ccs.k12.nc.us</li>
       </ul>
+    </div>
+  </div>
+
+  <!-- Large Blurred Feature Banner -->
+  <div class="feature-banner">
+    <div class="banner-frame">
+      <img src="Knight Render BG.png" alt="Featured Render Banner">
     </div>
   </div>
 
   <!-- Bottom Black Bar -->
   <footer>
-    <p>© FILM & PHOTOGRAPHY CLUB GD PORTFOLIO</p>
+    <p>© FILM & PHOTOGRAPHY CLUB LEAD PORTFOLIO</p>
   </footer>
 
 </body>
