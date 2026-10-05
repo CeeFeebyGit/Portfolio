@@ -38,7 +38,7 @@
       height: 100%;
       background: url('VANITY LICNESE PLATE.png') center/cover no-repeat;
       filter: blur(12px) brightness(0.4);
-      transform: scale(1.1); /* Prevents blurred edges from shrinking */
+      transform: scale(1.1);
       z-index: 1;
     }
     .header-content {
@@ -102,6 +102,42 @@
       height: 100%;
       object-fit: contain;
       padding: 8px;
+    }
+
+    /* Experience Section Styling */
+    .experience-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px 30px 20px;
+    }
+    .exp-card {
+      background: rgba(15, 15, 15, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 15px;
+      backdrop-filter: blur(5px);
+    }
+    .exp-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+    .exp-subtitle {
+      font-size: 0.85rem;
+      color: #aaaaaa;
+      margin-bottom: 12px;
+    }
+    .exp-list {
+      list-style-type: disc;
+      padding-left: 20px;
+      color: #dddddd;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .exp-list li {
+      margin-bottom: 6px;
     }
 
     /* Sticky Bottom Black Bar */
@@ -169,6 +205,31 @@
     </div>
     <div class="thumb">
       <img src="Screenshot 2026-10-04 233348.png" alt="Screenshot 5">
+    </div>
+  </div>
+
+  <!-- Experience Section Header -->
+  <h2 class="section-title">EXPERIENCE</h2>
+
+  <!-- Experience Content -->
+  <div class="experience-container">
+    <div class="exp-card">
+      <div class="exp-title">Graphic Designer & Media Lead</div>
+      <div class="exp-subtitle">Film & Photography Club | 2024 - Present</div>
+      <ul class="exp-list">
+        <li>Designed promotional posters, social media assets, and digital banners.</li>
+        <li>Collaborated on media projects and photography compositions.</li>
+        <li>Managed visual identity and graphic templates for events and applications.</li>
+      </ul>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-title">Freelance Visual Artist</div>
+      <div class="exp-subtitle">Self-Employed | 2023 - Present</div>
+      <ul class="exp-list">
+        <li>Created custom 3D renders, background art, and custom graphics.</li>
+        <li>Delivered high-quality assets tailored to specific client prompts and requirements.</li>
+      </ul>
     </div>
   </div>
 
