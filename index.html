@@ -18,6 +18,7 @@
       color: #ffffff;
       font-family: Arial, sans-serif;
       min-height: 100vh;
+      padding-bottom: 60px; /* Leave space so bottom content isn't covered by the bar */
     }
     header {
       padding: 24px 20px;
@@ -35,12 +36,22 @@
       margin-top: 4px;
     }
 
-    /* 4-Column Grid */
+    /* Subheading Style */
+    .section-title {
+      max-width: 1400px;
+      margin: 30px auto 10px auto;
+      padding: 0 20px;
+      font-size: 1.2rem;
+      color: #dddddd;
+      letter-spacing: 1px;
+    }
+
+    /* 4-Column Grid Layout */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 10px;
-      padding: 20px;
+      padding: 0 20px 20px 20px;
       max-width: 1400px;
       margin: 0 auto;
     }
@@ -68,6 +79,26 @@
       object-fit: contain;
       padding: 8px;
     }
+
+    /* Sticky Bottom Black Bar */
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      background: #000000;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    footer p {
+      color: #666666;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+    }
   </style>
 </head>
 <body>
@@ -77,22 +108,39 @@
     <p class="sub">Film & Photography Club Lead Application</p>
   </header>
 
-  <div class="gallery-grid">
-    <!-- Item 1 -->
+  <!-- Main 4 Entries -->
+  <div class="gallery-grid" style="margin-top: 20px;">
     <div class="thumb">
       <img src="VANITY LICNESE PLATE.png" alt="Vanity License Plate">
     </div>
-
-    <!-- Item 2 -->
     <div class="thumb">
       <img src="Template 1.png" alt="Template Graphic">
     </div>
-
-    <!-- Item 3 -->
     <div class="thumb">
       <img src="Background EX 1.png" alt="Background Graphic">
     </div>
+    <div class="thumb">
+      <img src="Knight Render BG.png" alt="Knight Render">
+    </div>
   </div>
+
+  <!-- Examples Section Header -->
+  <h2 class="section-title">Ex:</h2>
+
+  <!-- Screenshots Grid -->
+  <div class="gallery-grid">
+    <div class="thumb">
+      <img src="Screenshot 2026-10-04 223558.png" alt="Example Screenshot 1">
+    </div>
+    <div class="thumb">
+      <img src="Screenshot 2026-10-04 223638.png" alt="Example Screenshot 2">
+    </div>
+  </div>
+
+  <!-- Always-On Bottom Black Bar -->
+  <footer>
+    <p>© FILM & PHOTOGRAPHY CLUB LEAD PORTFOLIO</p>
+  </footer>
 
 </body>
 </html>
